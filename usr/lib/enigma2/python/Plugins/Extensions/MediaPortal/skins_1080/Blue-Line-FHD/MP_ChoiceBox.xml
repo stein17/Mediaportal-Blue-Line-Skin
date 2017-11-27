@@ -1,9 +1,14 @@
-<screen  name="ChoiceBoxExt" position="center,center" size="1264,467" title="Input" flags="wfNoBorder">
-    <widget name="title" position="2,2" size="1260,60" font="mediaportal;40"  zPosition="1" halign="center" valign="center" transparent="1" />
-    <widget name="text" position="15,85" size="1180,0" font="mediaportal;30" zPosition="1"  transparent="1" />
-    <widget name="list" position="2,65" size="1260,400" itemHeight="38"  scrollbarMode="showOnDemand" transparent="1" zPosition="1" />
+<!-- MP_ChoiceBox -->
+<screen backgroundColor="background" name="ChoiceBoxExt" position="center,center" size="1264,467" title="Input">
+    <widget name="title" position="2,2" size="1260,60" font="mediaportal;40" backgroundColor="background" foregroundColor="bluetitle" zPosition="1" halign="center" valign="center" transparent="1" />
+	<widget name="bgup" position="2,2" size="1260,60" backgroundColor="background" />
+    <widget name="bgdown" position="2,64" size="1260,400" backgroundColor="background" />
+	<eLabel name="vertikalline" position="2,63" size="1260,2" foregroundColor="backgroundBlue" backgroundColor="backgroundBlue" />
+	<widget name="text" position="15,85" size="1180,0" font="mediaportal;30" zPosition="1" backgroundColor="background" transparent="1" />
+    <widget name="list" position="2,65" size="1260,400" itemHeight="38" backgroundColor="background" scrollbarMode="showOnDemand" transparent="1" zPosition="1" />
 	<applet type="onLayoutFinish">
-# this should be factored out into some helper code, but currently demonstrates applets.
+
+	# this should be factored out into some helper code, but currently demonstrates applets.
 from enigma import eSize, ePoint
 
 orgwidth = self.instance.size().width()
